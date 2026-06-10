@@ -1,9 +1,9 @@
 % -----------------------------------------------
 % Template for ISMIR LBD Papers
-% 2025 version, based on previous ISMIR templates
+% 2026 version, based on previous ISMIR templates
 
 % Requirements :
-% * 2+1 page length maximum
+% * 2+n page length maximum
 % * 10MB maximum file size
 % * Copyright note must appear in the bottom left corner of first page
 % * Clearer statement about citing own work in anonymized submission
@@ -13,16 +13,15 @@
 \documentclass{article}
 \usepackage[T1]{fontenc} % add special characters (e.g., umlaute)
 \usepackage[utf8]{inputenc} % set utf-8 as default input encoding
+\usepackage[submission]{ismir} 
 \usepackage{amsmath,cite,url}
 \usepackage{graphicx}
-\usepackage[lbd]{ismir}
-
 \usepackage{color}
-
 \def\lbd{}	% Flag to use correct LBD settings in the paper, please do not modify this line
 
+\usepackage{lineno}
+\linenumbers
 
-% \onecolumn
 % Title. Please use IEEE-compliant title case when specifying the title here,
 % as it has implications for the copyright notice
 % ------
@@ -34,8 +33,8 @@
 % To use with only one author or several with the same address
 % ---------------
 %\oneauthor
-% {Names}
-% {Affiliations}
+% {Names should be omitted for double-blind reviewing}
+% {Affiliations should be omitted for double-blind reviewing}
 
 % Two addresses
 % --------------
@@ -47,7 +46,7 @@
 % --------------
 \threeauthors
   {First Author} {Affiliation1 \\ {\tt author1@ismir.edu}}
-  {Second Author} {Affiliation2 \\ {\tt author2@ismir.edu}}
+  {Second Author} {\bf Retain these fake authors in\\\bf submission to preserve the formatting}
   {Third Author} {Affiliation3 \\ {\tt author3@ismir.edu}}
 
 % Four or more addresses
@@ -61,7 +60,7 @@
 %{\tt\small CorrespondenceAuthor@ismir.edu, PossibleOtherAuthor@ismir.edu}
 %}
 
-% For the author list in the Creative Common license and PDF metadata, please enter author names.
+% For the author list in the Creative Common license and PDF metadata, please enter author names. 
 % Please abbreviate the first names of authors and add 'and' between the second to last and last authors.
 \def\authorname{F. Author, S. Author, and T. Author}
 
@@ -77,7 +76,7 @@
 \maketitle
 %
 \begin{abstract}
-The abstract should be placed at the top left column and should contain about 150-200 words. LBD submissions are submitted as extended abstracts and \textcolor{red}{should not be anonymized}. Please note that extended abstract is not a conference paper. Therefore, it will not be part of the official ISMIR \conferenceyear\ proceedings, and should not be cited as such.
+The abstract should be placed at the top left column and should contain about 150-200 words. LBD submissions are submitted as extended abstracts and \textcolor{red}{should not be anonymized}. Please note that extended abstract is not a conference paper. Therefore, it will not be part of the official ISMIR \conferenceyear\ proceedings, and should not be cited as such. 
 \end{abstract}
 %
 \section{Introduction}\label{sec:introduction}
@@ -88,7 +87,7 @@ If you have any questions, please contact the Program Committee (\texttt{ismir\c
 This template can be downloaded from the ISMIR \conferenceyear\ web site (\texttt{http://ismir\conferenceyear.ismir.net}).
 %
 \section{Paper Length \& File Size}
-We adopt a ``(2+1)-page policy'' for Late-Breaking Demo (LBD) papers in ISMIR \conferenceyear. That is, LBD papers are extended abstracts that may have a maximum of 2 pages of technical content (including figures and tables) \textcolor{red}{with one optional page that contains only references and acknowledgments.}
+We adopt a ``(2+1)-page policy'' for Late-Breaking Demo (LBD) papers in ISMIR \conferenceyear. That is, LBD papers are extended abstracts that may have a maximum of 2 pages of technical content (including figures and tables) \textcolor{red}{with one optional page that contains only references and acknowledgments.} 
 
 Paper should be submitted as PDFs and the \textcolor{red}{file size is limited to 10MB}. Please compress images and figures as necessary before submitting.
 
@@ -125,7 +124,7 @@ If the authors have different addresses, put the addresses, evenly spaced, under
 \subsection{First Page Copyright Notice}
 
 Please include the copyright notice exactly as it appears here in the lower left-hand corner of the page.
-It is set in 8pt Times. \textcolor{red}{Please ensure to insert the correct author names and paper title in the copyright notice when submitting the manuscript.} For \LaTeX users, this will be handled by the template automatically. For Word users, this has to be done manually.
+It is set in 8pt Times. \textcolor{red}{After your extended abstract is accepted, you will need to insert the appropriate author names and paper title in the copyright notice when submitting the camera-ready version.} For \LaTeX users, this will be handled by the template automatically. For Word users, this has to be done manually.
 
 
 \subsection{Page Numbering, Headers and Footers}
@@ -135,7 +134,7 @@ These will be added when the publications are assembled.
 
 \subsection{Line Numbers}
 
-\textcolor{red}{Line numbers should be removed} from your originally submitted manuscript. This can be done in \LaTeX by commenting out the command \verb|\linenumbers|. This can be done in Microsoft Word by selecting Layout > Line Numbers > None.
+Line numbers should be included in your originally submitted manuscript, for reference during screening. \textcolor{red}{However, after your extended abstract is accepted, you must remove all line numbers from the final camera-ready version.} This can be done in \LaTeX by commenting out the command \verb|\linenumbers| on Line 22. This can be done in Microsoft Word by selecting Layout > Line Numbers > None.
 
 \section{First Level Headings}
 
@@ -194,7 +193,7 @@ Figures and tables may extend across both columns to a maximum width of 17.2cm.
 
 \begin{figure}
  \centerline{\framebox{
- \includegraphics[alt={ISMIR 2026 LBD template test image},width=0.9\columnwidth]{example.png}}}
+ \includegraphics[width=0.8\columnwidth]{example.png}}}
  \caption{Figure captions should be placed below the figure.}
  \label{fig:example}
 \end{figure}
@@ -216,6 +215,11 @@ IEEE standard (\url{https://ieeeauthorcenter.ieee.org/wp-content/uploads/IEEE-Re
 IEEE abbreviations (Proceedings $\rightarrow$ Proc.) may be used to shorten reference listings. All references listed
 should be cited in the text. When referring to documents, place the numbers in square brackets (e.g., \cite{ISMIR17Author:01}
 for a single reference, or \cite{JNMR10Someone:01,Book20Person:01,Chapter09Person:01} for a range).
+
+
+\section{AI Usage Statement}
+
+In line with the ISMIR 2026 AI Usage Policy, if you need to declare and explain the use of AI tools in the work described in the paper, you can do so by including a section titled ``AI Usage Statement" at the end of the paper. The AI Usage Statement section can be included both at submission time and in your camera-ready version. See the Call for Late-breaking Demo and Author Guidelines for more details. The AI Usage Statement section does \textit{not} count towards the page limit for scientific content. 
 
 
 % For bibtex users:
@@ -245,3 +249,4 @@ for a single reference, or \cite{JNMR10Someone:01,Book20Person:01,Chapter09Perso
 %\end{thebibliography}
 
 \end{document}
+
